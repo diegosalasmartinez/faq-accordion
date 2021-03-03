@@ -5,26 +5,26 @@ body{
     background-attachment: fixed;
 }
 
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15rem;
+}
+
 .faq{
     display: block;
-    position: absolute;
+    position: relative;
     width: 85%;
-    height: 75%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
     background-color: $grisClaro;
     border-radius: 25px;
-    
     
     @include laptop{
         @include grid(2,0);
         width: 65%;
+        align-items: center;
+        justify-content: center;
     }
-
-    
 
     &__image{
         position: relative;
@@ -34,18 +34,21 @@ body{
         background-size: 70%;
         background-position: 35% 0%;
         background-repeat: no-repeat;
-        height: 40%;
+        height: 20rem;
         width: 100%;
         margin-bottom: 3rem;
         
         @include tablet{
             top: -10rem;
-            height: 60%;
-            background-position: 35% 0%;
+            margin: 0 auto;
+            width: 85%;
+            height: 40rem;
+            background-position: 35% 20%;
         }
-
+        
         @include laptop{
             top: 0;
+            left: 0;
             background-image: url('../img/illustration-woman-online-desktop.svg');
             background-size: 110%;
             background-position: 120% center;
@@ -62,7 +65,7 @@ body{
                 position: absolute;
                 background-image: url('../img/illustration-box-desktop.svg');
                 background-size: 40%;
-                background-position: -15% 60%;
+                background-position: -15% 65%;
                 background-repeat: no-repeat;
                 height: 100%;
                 width: 100%;
@@ -75,15 +78,16 @@ body{
             bottom: -2rem;
             position: absolute;
             background-image: url('../img/bg-pattern-mobile.svg');
-            background-size: 85%;
+            background-size: 75%;
             background-position: 45% 45%;
             background-repeat: no-repeat;
             height: 100%;
             width: 100%;
             
             @include tablet{
+                bottom: 1rem;
                 background-size: 65%;
-                background-position: 45% 55%;
+                background-position: 45% 75%;
             }
 
             @include laptop{
@@ -98,16 +102,14 @@ body{
     }
     
     &__info{
-        height: 50%;
         padding: 2rem;
-        margin-top: -17rem;
+        margin-top: -15rem;
         
         @include tablet{
-            padding: 0 8rem 4rem 8rem;
+            padding: 2rem 8rem 4rem 8rem;
         }
         
         @include laptop{
-            height: 100%;
             padding: 4rem 8rem 4rem 6rem;
             margin-top: 0;
         }
@@ -200,5 +202,16 @@ body{
                 }
             }
         }
+    }
+}
+
+.attribution{
+    margin: 1rem 0;
+    color: $blanco;
+    font-size: 1.4rem;
+    text-align: center;
+
+    a:hover{
+        color: $red;
     }
 }
